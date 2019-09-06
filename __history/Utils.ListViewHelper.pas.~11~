@@ -1,0 +1,38 @@
+unit Utils.ListViewHelper;
+
+interface
+
+uses
+  FMX.ListView;
+
+type
+  TListViewHelper = class helper for TListView
+  public
+    function ItemHeight(const idx: Integer): Single;
+    function TotalItemsHeight: Single;
+  end;
+
+implementation
+
+{ TListViewHelper }
+
+function TListViewHelper.ItemHeight(const idx: Integer): Single;
+begin
+  if (idx >= 0) and (idx < Self.Items.Count) then
+  begin
+    Result:=Self.Items[idx].Height;
+    if Result = 0 then //auto calculated;
+    
+  end
+  else
+    Result:=0;
+end;
+
+function TListViewHelper.TotalItemsHeight: Single;
+begin
+  Result:=0;
+  for var I := 0 to Self.Items.Count-1 do
+    Result:=Result + Self.Items[I].Height;
+end;
+
+end.

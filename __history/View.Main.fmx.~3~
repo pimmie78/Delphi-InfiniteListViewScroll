@@ -1,0 +1,39 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 461
+  ClientWidth = 287
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lv: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    OnUpdateObjects = lvUpdateObjects
+    Align = Client
+    Size.Width = 287.000000000000000000
+    Size.Height = 376.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object log: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    StyledSettings = [Family, Style, FontColor]
+    TextSettings.Font.Size = 9.000000000000000000
+    TextSettings.WordWrap = True
+    Align = Bottom
+    Position.Y = 376.000000000000000000
+    Size.Width = 287.000000000000000000
+    Size.Height = 85.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 283.000000000000000000
+    Viewport.Height = 81.000000000000000000
+  end
+end
